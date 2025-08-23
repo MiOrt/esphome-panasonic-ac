@@ -175,6 +175,7 @@ void PanasonicAC::set_current_temperature_sensor(sensor::Sensor *current_tempera
                                                            {
                                                              this->current_temperature = state;
                                                              this->publish_state();
+                                                             id(ac_last_seen) = millis();
                                                            });
 }
 
